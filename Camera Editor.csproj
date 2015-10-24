@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{A39C1EE4-70FF-4838-8247-FEB9DD0FF99B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Arua Camera Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\CHR.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\ClientType.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\HIM.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\IFO.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\IReadable.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\ISavable.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\LIT.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\RoseFile.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\STB.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\STL.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\TIL.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\TSI.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\ZMD.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\ZMO.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\ZMS.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\ZON.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.FileHandler\ZSC.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler.ObjectVertex\ObjectVertex.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler.TerrainVertex\TerrainVertex.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler\Aera.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler\GraphicsDeviceControl.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler\GraphicsDeviceService.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler\previewControl.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler\ServiceContainer.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler\Shaders.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler\Sprite.cs" />
+    <Compile Include="Arua_Camera_Editor.Common.GraphicsHandler\Text.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\CameraMotion.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\ContentManager.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\DecorationBlock.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\Entity.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\FPS.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\FreeRoamCamera.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\ICamera.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\Map.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\MapBlock.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\Player.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\RoseBoudingBox.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\StatusManager.cs" />
+    <Compile Include="Arua_Camera_Editor.Common\Terrain.cs" />
+    <Compile Include="Arua_Camera_Editor.Properties\Resources.cs" />
+    <Compile Include="Arua_Camera_Editor.Properties\Settings.cs" />
+    <Compile Include="Arua_Camera_Editor\AddFrameMessageBox.cs" />
+    <Compile Include="Arua_Camera_Editor\InterpolationMessageBox.cs" />
+    <Compile Include="Arua_Camera_Editor\MainForm.cs" />
+    <Compile Include="Arua_Camera_Editor\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Arua_Camera_Editor.Properties\Resources.resources" />
+    <EmbeddedResource Include="Arua_Camera_Editor\AddFrameMessageBox.resources" />
+    <EmbeddedResource Include="Arua_Camera_Editor\InterpolationMessageBox.resources" />
+    <EmbeddedResource Include="Arua_Camera_Editor\MainForm.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
